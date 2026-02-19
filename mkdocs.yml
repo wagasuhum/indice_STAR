@@ -1,0 +1,8 @@
+site_name: Prueba Pagina
+
+theme:
+  name: material
+
+nav:
+  - Inicio: index.md
+  - Guia: guia.md
