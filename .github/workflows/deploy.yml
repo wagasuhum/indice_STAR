@@ -13,12 +13,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - uses: actions/setup-python@v4
+      - name: Setup Python
+        uses: actions/setup-python@v4
         with:
           python-version: 3.x
 
-      - run: pip install mkdocs-material
+      - name: Install MkDocs
+        run: pip install mkdocs mkdocs-material
 
-      - run: mkdocs gh-deploy --force
+      - name: Deploy
+        run: mkdocs gh-deploy --force
