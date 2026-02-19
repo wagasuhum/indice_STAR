@@ -18,3 +18,6 @@ Este proyecto permite:
 
 ```bash
 pip install habitat-tool
+
+## 🚀 Nueva sección
+Contenido de prueba
