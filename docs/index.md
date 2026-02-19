@@ -144,3 +144,14 @@ Dentro del siguiente grado de amenaza en peligro resaltan las clases pertenecien
   <img src="assets/img/grafica7.png" width="600">
 </p>
 
+## Poligonos de especies amenazdas segun categoria UICN
+
+<p align="center">
+  <img src="assets/img/grafica9.png" width="600">
+</p>
+
+### Poligonos de especies amenazadas por grupo
+
+<p align="center">
+  <img src="assets/img/grafica10.png" width="600">
+</p>
