@@ -137,9 +137,10 @@ En términos de la resolución 126 de 2024, que establecen las especies amenazad
   <img src="assets/img/grafica6.png" width="600">
 </p>
 
-```bash
-pip install habitat-tool
+Para las diferentes categorías taxonómicas observadas en la zona, destaca la clase Insecta que tiene el 50% de las especies en nivel crítico según las categorías de amenaza nacionales. Un patrón similar se observa con los taxones presentes en las clases Liliopsida con el 33,3%, Amphibia con el 12.5%, Magnoliopsida con el 12.1% y Aves con el 7.1%. 
+Dentro del siguiente grado de amenaza en peligro resaltan las clases pertenecientes al reino plantae,  dentro de la cuales Cycadopsida, Magnoliopsida y Liliopsida contienen un número considerable de especies con valores superiores al 40%, una respuesta similar se observa en vertebrados de la clase Amphibia, Testudines y Squamata en la cuales el 50% de estas se encuentra en este nivel de amenaza. 
 
-## 🚀 Nueva sección
-Contenido de prueba
+<p align="center">
+  <img src="assets/img/grafica7.png" width="600">
+</p>
 
