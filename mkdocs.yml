@@ -5,7 +5,7 @@ theme:
 
 nav:
   - Inicio: index.md
-  - Guia: guia.md
+  - Aplicacion: aplicacion.md
 
 markdown_extensions:
   - pymdownx.arithmatex:
