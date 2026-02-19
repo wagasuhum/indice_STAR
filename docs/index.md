@@ -29,6 +29,31 @@ El propósito principal de la métrica STAR (Species Threat Abatement and Restor
 
 ---
 
+## 🧮 Índice STAR(T)
+
+$$
+STAR(T) =
+\left(
+\sum_{s} N_s P_s
+\right)
+\cdot
+\left(
+\sum_{i} W_i C_i
+\right)
+$$
+
+Donde:
+
+$$
+\begin{aligned}
+N_s &= \text{Número de elementos del tipo } s \\
+P_s &= \text{Peso o importancia del elemento } s \\
+W_i &= \text{Peso del impacto } i \\
+C_i &= \text{Magnitud o contribución del impacto } i
+\end{aligned}
+$$
+
+
 ## 🚀 Instalación
 
 ## Especies que se encuentran amenazadas segun IUCN
@@ -37,10 +62,7 @@ El propósito principal de la métrica STAR (Species Threat Abatement and Restor
   <img src="assets/img/grafica1.png" width="600">
 </p>
 
-$$
-P(x) = \frac{1}{\sigma \sqrt{2\pi}}
-e^{-\frac{(x-\mu)^2}{2\sigma^2}}
-$$
+
 
 ```bash
 pip install habitat-tool
