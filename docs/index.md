@@ -16,6 +16,13 @@ Este proyecto permite:
 
 ## 🚀 Instalación
 
+## Gráfica de resultados
+
+<p align="center">
+  <img src="assets/img/grafica1.png" width="600">
+</p>
+
+
 ```bash
 pip install habitat-tool
 
