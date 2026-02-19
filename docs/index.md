@@ -129,6 +129,14 @@ En términos generales la mayoría de especies amenazadas para la zona usando el
   <img src="assets/img/grafica5.png" width="600">
 </p>
 
+## Especies amenazadas segun resolucion 126 de 2024
+
+En términos de la resolución 126 de 2024, que establecen las especies amenazadas bajo un criterio nacional, se observa que la mayoría de especies se encuentran en un categoría vulnerable alcanzando el 46.7% de los registros de la zona, seguido por los taxones que se encuentran en peligro con el 41.1%, y por último en peligro crítico a nivel local se encuentran 12.2% de los grupos reportados para la zona de interés.
+
+<p align="center">
+  <img src="assets/img/grafica6.png" width="600">
+</p>
+
 ```bash
 pip install habitat-tool
 
