@@ -83,6 +83,8 @@ R_{s}
 $$
 
 Donde:
+
+
 $$
 \begin{aligned}
 N_s &= \text{Número de especies } s \text{ presentes en la unidad espacial} \\
