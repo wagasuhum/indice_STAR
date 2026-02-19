@@ -165,5 +165,5 @@ Dentro del siguiente grado de amenaza en peligro resaltan las clases pertenecien
 ### Poligonos de especies amenazadas por grupo segun categoria de resolucion 126 de 2024
 
 <p align="center">
-  <img src="assets/img/grafica12.png" width="600">
+  <img src="assets/img/grafica13.png" width="600">
 </p>
