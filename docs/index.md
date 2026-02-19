@@ -105,7 +105,11 @@ Para las 5735 especies reportadas en la zona del piedemonte de Casanare, un tota
   <img src="assets/img/grafica1.png" width="600">
 </p>
 
+La mayoría de especies amenazadas y que son endémicas pertenece a las plantas que comprenden las clases Magnoliopsida (55.6%), Liliopsida (7.5%), y Cicadopsida (1.9%), para el reino Animalia, la mayoría corresponde a anfibios (15.1%), seguido por los peces de la clase Actinopterygii (9.4%), las aves (7.5%) y por ultimo, los mamíferos (1.9%).
 
+<p align="center">
+  <img src="assets/img/grafica2.png" width="600">
+</p>
 
 
 ```bash
