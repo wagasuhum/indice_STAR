@@ -3,8 +3,15 @@ site_name: Índice STAR
 theme:
   name: material
   logo: assets/logo.png
-  features:
-    - navigation.tabs
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Cambiar a modo oscuro
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Cambiar a modo claro
 
 nav:
   - Inicio: index.md
