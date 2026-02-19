@@ -26,8 +26,24 @@ El propósito principal de la métrica STAR (Species Threat Abatement and Restor
 - Modelos Digitales de Elevación (DEM)
 - Listas Rojas Nacionales
 
-
 ---
+
+## 🧭Limitaciones
+
+###Limitaciones intrínsecas de STAR
+
+- Enfoque en especies amenazadas o casi amenazadas
+- Suposición de eliminación total de amenazas
+- Simplificación de la restauración
+- Consideraciones sobre la escala espacial
+- Reflejo limitado de la complejidad de las amenazas
+- Amenazas globales
+
+###Limitaciones relacionadas con los datos subyacentes
+
+- Enfoque en especies amenazadas o casi amenazadas
+- Variabilidad en las listas rojas nacionales:
+
 
 ## 🧮 Índice STAR(T)
 
@@ -43,8 +59,6 @@ $$
 
 Donde:
 
-Donde:
-
 $$
 \begin{aligned}
 N_s &= \text{Número de especies } s \text{ presentes en la unidad espacial} \\
@@ -56,6 +70,29 @@ C_{s,t} &= \text{Contribución de la amenaza } t \\
 \end{aligned}
 $$
 
+## ⭐ Cálculo de STAR (R)
+
+$$
+STAR(R) =
+\sum_{s}
+\sum_{i}
+N_s
+P_{s,i}
+W_s
+R_{s}
+$$
+
+Donde:
+$$
+\begin{aligned}
+N_s &= \text{Número de especies } s \text{ presentes en la unidad espacial} \\
+P_{s,i} &= \text{Proporción del área de hábitat (AOH) potencialmente recuperable de la especie } s \\
+        &\quad \text{en la ubicación } i \\
+W_s &= \text{Peso asociado al nivel de amenaza de la especie } s \\
+R_s &= \text{Potencial de recuperación de la especie } s \\
+     &\quad \text{mediante acciones de restauración del hábitat}
+\end{aligned}
+$$
 
 ## 🚀 Instalación
 
