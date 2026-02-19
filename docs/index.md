@@ -111,6 +111,23 @@ La mayoría de especies amenazadas y que son endémicas pertenece a las plantas 
   <img src="assets/img/grafica2.png" width="600">
 </p>
 
+Para las especies amenazadas en términos generales las plantas agrupan gran parte de los taxones que se encuentran en la lista roja, con un 57.8%, por partes de los animales los mamíferos y peces concentran el 22.2% de los especímenes amenazadas para la zona, los herpetos (reptiles y anfibios) comprenden el 11.1%, por último, las aves con el 8.9%.
+
+<p align="center">
+  <img src="assets/img/grafica3.png" width="600">
+</p>
+
+Para el piedemonte los taxones pertenecientes a las clases Magnolipopsida (7%), Liliopsida (28.6%) y Amphibia (9.1%), incluyen organismos en estado de amenaza crítico. Dentro de los vertebrados destacan clases como Squamata (50%) y Mammalia (7.1%), las cuales presentan entre los registros reportadas un considerable número de taxones que pertenecen al segundo nivel de amenaza (En peligro), de igual manera, especies que se encuentran en la clase Actinoptergi (69.2%) y Testudines (100%), representan un valor importante en términos de conservación ya que en su mayoría  estos organismos reportados en la zona se encuentran en categoría vulnerable. 
+
+<p align="center">
+  <img src="assets/img/grafica4.png" width="600">
+</p>
+
+En términos generales la mayoría de especies amenazadas para la zona usando el criterio de la UICN están en la categoría vulnerable con el 39.2%, le siguen aquellos taxones que se encuentran casi amenazados con el 30.8%, mientras que el segundo nivel de amenaza en peligro se encuentra el 24.6% de los registros para la zona, por último, para el grupo de taxones que requieren un mayor grado de atención que es en peligro crítico pertenece al 5.4% del total. 
+
+<p align="center">
+  <img src="assets/img/grafica5.png" width="600">
+</p>
 
 ```bash
 pip install habitat-tool
