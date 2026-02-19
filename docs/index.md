@@ -1,17 +1,20 @@
-# Prueba Pagina 🚀
+# 🌎 Proyecto de Hábitat
 
-![status](https://img.shields.io/badge/status-activo-green)
-![build](https://img.shields.io/badge/build-passing-brightgreen)
-
----
-
-## Overview
-
-Este es mi sitio generado con Markdown.
+Bienvenido a la documentación oficial.
 
 ---
 
-## Instalación
+## 📌 Qué hace
+
+Este proyecto permite:
+
+- Analizar distribución de especies
+- Generar mapas
+- Automatizar datos ecológicos
+
+---
+
+## 🚀 Instalación
 
 ```bash
-pip install prueba
+pip install habitat-tool
