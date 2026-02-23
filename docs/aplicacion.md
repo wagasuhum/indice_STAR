@@ -26,7 +26,7 @@ freq(aoh)
 plot(aoh, col = c("purple", "yellow"))
 
 <p align="center">
-  <img src="assets/img/aoh_plot.png" width="600">
+  <img src="assets/img/aoh_plot.png">
 </p>
 
 ### Guardado de raster de area de habitat
