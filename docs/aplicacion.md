@@ -147,7 +147,7 @@ STAR_by_category <- results %>%
     .groups = 'drop'
   )
 
-#### 6. Mostrar resultados CORREGIDOS
+#### Mostrar resultados CORREGIDOS
 
 cat("==================================================\n")
 cat("📊 RESULTADOS FINALES - ANÁLISIS STAR (CORREGIDO)\n")
@@ -157,7 +157,7 @@ cat("Total archivos raster encontrados:", length(r_files), "\n")
 cat("STAR TOTAL (según metodología oficial):", round(STAR_total, 2), "\n")
 cat("==================================================\n\n")
 
-# Resultados por categoría IUCN
+### Resultados por categoría IUCN
 cat("DESGLOSE POR CATEGORÍA IUCN:\n")
 cat("----------------------------------------\n")
 for (i in 1:nrow(STAR_by_category)) {
@@ -169,7 +169,7 @@ for (i in 1:nrow(STAR_by_category)) {
 
 cat("\n")
 
-# Mostrar las 10 especies con mayor contribución a STAR
+### Mostrar las 10 especies con mayor contribución a STAR
 cat("TOP 10 ESPECIES - MAYOR CONTRIBUCIÓN A STAR:\n")
 cat("----------------------------------------\n")
 top_star <- results[order(-results$STAR_species), ][1:10, ]
