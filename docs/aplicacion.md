@@ -25,10 +25,10 @@ freq(aoh)
 ### Grafica de area de habitat
 plot(aoh, col = c("purple", "yellow"))
 
-### resultado
 <p align="center">
-  <img src="../assets/img/aoh_plot.png" width="600">
+  <img src="/indice_STAR/assets/img/aoh_plot.png" width="600">
 </p>
+
 
 ### Guardado de raster de area de habitat
 writeRaster(aoh, "Tinamus_major.tif", overwrite = TRUE)
