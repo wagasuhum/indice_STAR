@@ -25,8 +25,9 @@ freq(aoh)
 ### Grafica de area de habitat
 plot(aoh, col = c("purple", "yellow"))
 
+
 <p align="center">
-  <img src="assets/img/aoh_plot.png" width="600">
+  <img src="https://wagasuhum.github.io/indice_STAR/assets/img/aoh_plot.png" width="600">
 </p>
 
 
