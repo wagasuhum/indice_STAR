@@ -25,6 +25,7 @@ freq(aoh)
 ### Grafica de area de habitat
 plot(aoh, col = c("purple", "yellow"))
 
+### resultado
 <p align="center">
   <img src="assets/img/aoh_plot.png">
 </p>
