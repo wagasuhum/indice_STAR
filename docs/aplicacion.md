@@ -26,7 +26,7 @@ freq(aoh)
 plot(aoh, col = c("purple", "yellow"))
 
 <p align="center">
-  <img src="/indice_STAR/assets/img/aoh_plot.png" width="600">
+  <img src="assets/img/aoh_plot.png" width="600">
 </p>
 
 
