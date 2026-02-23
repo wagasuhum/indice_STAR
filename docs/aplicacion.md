@@ -27,7 +27,7 @@ plot(aoh, col = c("purple", "yellow"))
 
 ### resultado
 <p align="center">
-  <img src="assets/img/aoh_plot.png">
+  <img src="assets/img/aoh_plot.png" width="600">
 </p>
 
 ### Guardado de raster de area de habitat
