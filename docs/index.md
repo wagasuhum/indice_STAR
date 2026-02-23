@@ -26,6 +26,13 @@ El propósito principal de la métrica STAR (Species Threat Abatement and Restor
 - Modelos Digitales de Elevación (DEM)
 - Listas Rojas Nacionales
 
+## Flujo de trabajo para el calculo
+
+<p align="center">
+  <img src="assets/img/Metodologia STAR.png" width="600">
+</p>
+
+
 ---
 
 ## 🧭Limitaciones
