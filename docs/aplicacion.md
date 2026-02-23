@@ -132,7 +132,7 @@ for (r_file in r_files) {
   ))
 }
 
-### 5. Calcular índices globales CORREGIDOS
+### Calcular índices globales CORREGIDOS
 
 
 #### STAR total = Suma de todos los STAR individuales
