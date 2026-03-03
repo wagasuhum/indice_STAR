@@ -4,7 +4,7 @@ El propósito principal de la métrica STAR (Species Threat Abatement and Restor
 
 ---
 
-## ☘️ Qué hace
+## Qué hace
 
 - Cuantificación de la contribución a la reducción del riesgo de extinción
 - Identificación espacialmente explícita
@@ -17,7 +17,7 @@ El propósito principal de la métrica STAR (Species Threat Abatement and Restor
 - Apoyo a la planificación de la conservación (pero no como herramienta única de priorización)
 - Seguimiento del progreso
 
-## 🌳Insumos
+## Insumos
 
 - Lista Roja de Especies Amenazadas de la UICN
 - Base de Datos Mundial de Áreas Clave para la Biodiversidad (WDKBA)
@@ -26,7 +26,7 @@ El propósito principal de la métrica STAR (Species Threat Abatement and Restor
 - Modelos Digitales de Elevación (DEM)
 - Listas Rojas Nacionales
 
-## 🌲Flujo de trabajo para el calculo
+## Flujo de trabajo para el calculo
 
 <p align="center">
   <img src="assets/img/Metodologia STAR.png" width="600">
@@ -35,7 +35,7 @@ El propósito principal de la métrica STAR (Species Threat Abatement and Restor
 
 ---
 
-## 🧭Limitaciones
+## Limitaciones
 
 ###Limitaciones intrínsecas de STAR
 
@@ -52,7 +52,7 @@ El propósito principal de la métrica STAR (Species Threat Abatement and Restor
 - Variabilidad en las listas rojas nacionales:
 
 
-## 🧮 Índice STAR(T)
+## Índice STAR(T)
 
 $$
 STAR(T) =
@@ -77,7 +77,7 @@ C_{s,t} &= \text{Contribución de la amenaza } t \\
 \end{aligned}
 $$
 
-## ⭐ Cálculo de STAR (R)
+## Cálculo de STAR (R)
 
 $$
 STAR(R) =
@@ -175,18 +175,13 @@ Dentro del siguiente grado de amenaza en peligro resaltan las clases pertenecien
 
 ### Amenazas segun la uicn para la especies presentes en la zona
 
-Un total de 42 especies para la zona del altiplano de Casanare presentan una amenaza en común de nivel uno que se relaciona con aspectos de desarrollo residencial y comercial, dentro de los cuales destaca el establecimiento de diferente infraestructura para la formación de asentamientos humanos, dentro de las cuales cinco especies (Chaetostoma dorsale, Chaetostoma formosae, Dolichancistrus fuesslii, Lontra longicaudis, Pentagonia magnifica), tiene una alcance major de este tipo de presión, lo que afectan notoriamente su categorización dentro de la lista roja; igualmente para el segundo nivel que corresponde a afectaciones en las especies generadas por actividades como agricultura y acuicultura específicamente actividades con cultivos anuales y perennes que tienen un impacto mayor en grupos de mamíferos como (Lontra longicaudis, Tremarctos ornatus, Myrmecophaga tridactyla).
-El nivel tres de amenazas que corresponde a impactos relacionados con la minería y la producción de energía, dentro de estos destacan para la zona de interés las actividades petroleras, siendo la especie que presentan mayor afectación Tremarctos ornatus y en menor medida Panthera onca, Symplocos trianae, Farlowella acus, Creagrutus atratus, Farlowella colombiensis, Chaetostoma joropo, Bromelia trianae, Knodus meridae, mientras para el nivel cuatro relacionado con transporte y corredores de servicios, la infraestructura vial genera un impacto sobre todas las poblaciones de Ayenia stipularis.
-
-
-  
   <img src="assets/img/grafica13.png" width="600">
 </p>
 
 
 ## 🦦 Amenazas UICN para las especies presentes en el poligono
 
-Un total de 42 especies para la zona del altiplano de Casanare presentan una amenaza en común de nivel uno que se relaciona con aspectos de desarrollo residencial y comercial, dentro de los cuales destaca el establecimiento de diferente infraestructura para la formación de asentamientos humanos, dentro de las cuales cinco especies (Chaetostoma dorsale, Chaetostoma formosae, Dolichancistrus fuesslii, Lontra longicaudis, Pentagonia magnifica), tiene una alcance major de este tipo de presión, lo que afectan notoriamente su categorización dentro de la lista roja; igualmente para el segundo nivel que corresponde a afectaciones en las especies generadas por actividades como agricultura y acuicultura específicamente actividades con cultivos anuales y perennes que tienen un impacto mayor en grupos de mamíferos como (Lontra longicaudis, Tremarctos ornatus, Myrmecophaga tridactyla).}
+Un total de 42 especies para la zona del altiplano de Casanare presentan una amenaza en común de nivel uno que se relaciona con aspectos de desarrollo residencial y comercial, dentro de los cuales destaca el establecimiento de diferente infraestructura para la formación de asentamientos humanos, dentro de las cuales cinco especies (Chaetostoma dorsale, Chaetostoma formosae, Dolichancistrus fuesslii, Lontra longicaudis, Pentagonia magnifica), tiene una alcance major de este tipo de presión, lo que afectan notoriamente su categorización dentro de la lista roja; igualmente para el segundo nivel que corresponde a afectaciones en las especies generadas por actividades como agricultura y acuicultura específicamente actividades con cultivos anuales y perennes que tienen un impacto mayor en grupos de mamíferos como (Lontra longicaudis, Tremarctos ornatus, Myrmecophaga tridactyla).
 
 El nivel tres de amenazas que corresponde a impactos relacionados con la minería y la producción de energía, dentro de estos destacan para la zona de interés las actividades petroleras, siendo la especie que presentan mayor afectación Tremarctos ornatus y en menor medida Panthera onca, Symplocos trianae, Farlowella acus, Creagrutus atratus, Farlowella colombiensis, Chaetostoma joropo, Bromelia trianae, Knodus meridae, mientras para el nivel cuatro relacionado con transporte y corredores de servicios, la infraestructura vial genera un impacto sobre todas las poblaciones de Ayenia stipularis.
 
