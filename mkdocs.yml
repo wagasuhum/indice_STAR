@@ -2,8 +2,6 @@ site_name: Índice STAR
 
 theme:
   name: readthedocs
-  logo: assets/img/logo.png  # <--- Debe ir indentado debajo de theme
-
 nav:
   - Inicio: index.md
   - Aplicacion: aplicacion.md
