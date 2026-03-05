@@ -31,6 +31,18 @@ plot(aoh, col = c("purple", "yellow"))
 </p>
 
 
+#### Area de habitat para *Dasypus novemcinctus* para varios años
+
+<p align="center">
+  <img src="https://wagasuhum.github.io/indice_STAR/assets/img/Dasypus.novemcinctus.png" width="600">
+</p>
+
+#### Area de habitat para *Dicotyles.tajacu* para varios años
+
+<p align="center">
+  <img src="https://wagasuhum.github.io/indice_STAR/assets/img/Dicotyles.tajacu.png" width="600">
+</p>
+
 ### Guardado de raster de area de habitat
 writeRaster(aoh, "Tinamus_major.tif", overwrite = TRUE)
 
