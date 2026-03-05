@@ -185,5 +185,13 @@ Un total de 42 especies para la zona del altiplano de Casanare presentan una ame
 
 El nivel tres de amenazas que corresponde a impactos relacionados con la minería y la producción de energía, dentro de estos destacan para la zona de interés las actividades petroleras, siendo la especie que presentan mayor afectación Tremarctos ornatus y en menor medida Panthera onca, Symplocos trianae, Farlowella acus, Creagrutus atratus, Farlowella colombiensis, Chaetostoma joropo, Bromelia trianae, Knodus meridae, mientras para el nivel cuatro relacionado con transporte y corredores de servicios, la infraestructura vial genera un impacto sobre todas las poblaciones de Ayenia stipularis.
 
+<div style="margin-top:20px;">
+  <a href="tabla_iucn.html" 
+     style="background:#2c7a7b; color:white; padding:10px 18px; 
+            text-decoration:none; border-radius:6px;">
+     🔎 Consultar base de datos completa
+  </a>
+</div>
+
 
 
