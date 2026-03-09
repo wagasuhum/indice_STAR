@@ -55,144 +55,171 @@ aoh_por_tesela <- extract(aoh_m, teselas, fun = sum, na.rm = TRUE)
 teselas$aoh_cells <- aoh_por_tesela[,2]
 
 
-# ============================================================================
-# SCRIPT PARA CALCULAR STAR USANDO LOS AOHS GENERADOS
-# ============================================================================
 
-# Cargar librerías
+# Calculo Indice STAR
+
+
+## Paquetes necesarios
 library(terra)
 library(sf)
 library(dplyr)
 library(readr)
 library(stringr)
 
-# ===============================
-# PARTE 1: CONFIGURACIÓN DE RUTAS
-# ===============================
 
-# Carpeta donde están los AOHs generados
+## Configuracion de rutas
+
+
+### Carpeta donde estan los AOH generados
 dir_aoh <- "C:/Users/walter.garcia/Documents/STAR/AOH_Generados/"
 
-# Archivo de metadata con categorías IUCN
+### Metadata de especies
 csv_file <- "C:/Users/walter.garcia/Documents/STAR/Especies_3.csv"
 
-# Shapefile del área de interés
+### Area de interes
 aoi_file <- "C:/Users/walter.garcia/Documents/STAR/poligono_pais_centrado.shp"
 
 
-# ===============================
-# PARTE 2: LEER METADATA Y PESOS IUCN
-# ===============================
+
+## Carga de metadata y pesos IUCN
+
 
 meta <- read_delim(csv_file, delim = ";")
 
-# Pesos IUCN
-iucn_weights <- c("LC" = 0, "NT" = 100, "VU" = 200, "EN" = 300, "CR" = 400)
+meta <- read_delim(csv_file, delim = ";")
+
+### Pesos segun categoria IUCN
+iucn_weights <- c(
+  "LC" = 0,
+  "NT" = 100,
+  "VU" = 200,
+  "EN" = 300,
+  "CR" = 400
+)
 
 meta$weight <- iucn_weights[meta$iucn_status]
 
 
-# ===============================
-# PARTE 3: LEER ARCHIVOS AOH
-# ===============================
 
-aoh_files <- list.files(dir_aoh, pattern = "_AOH\\.tif$", full.names = TRUE)
-
-if (length(aoh_files) == 0) {
-  stop("No se encontraron archivos AOH")
-}
+## Lectura de archivos AOH
 
 
-# ===============================
-# PARTE 4: PREPARAR ÁREA DE INTERÉS
-# ===============================
+aoh_files <- list.files(
+  dir_aoh,
+  pattern = "_AOH\\.tif$",
+  full.names = TRUE
+)
+
+length(aoh_files)
+
+
+## Carga del area de interes
+
 
 aoi <- st_read(aoi_file)
 
+### Raster de referencia
 ref_raster <- rast(aoh_files[1])
 
+### Reproyeccion del AOI
 aoi_proj <- st_transform(aoi, crs(ref_raster))
 
+### Creacion de mascara
 mask_aoi <- rasterize(vect(aoi_proj), ref_raster, field = 1)
 
 
-# ===============================
-# PARTE 5: CALCULAR STAR
-# ===============================
+## Calculo del indice STAR
 
+
+### dataframe donde se almacenaran los resultados finales
 results <- data.frame()
 
+### recorrer todos los rasters de AOH
 for (i in 1:length(aoh_files)) {
-  
+
+  ### archivo raster actual
   aoh_file <- aoh_files[i]
   nombre_archivo <- basename(aoh_file)
-  
+
+  ### extraer nombre de la especie desde el nombre del archivo
   spname <- gsub("_AOH\\.tif$", "", nombre_archivo)
   spname <- gsub("_", " ", spname)
-  
-  row_meta <- meta %>% 
+
+  ### buscar coincidencia exacta de la especie en la metadata
+  row_meta <- meta %>%
     filter(tolower(trimws(Species)) == tolower(trimws(spname)))
-  
+
+  ### si no hay coincidencia, intentar usando solo genero y especie
   if (nrow(row_meta) == 0) {
-    
+
     palabras <- str_split(spname, " ")[[1]]
-    
+
     if (length(palabras) >= 2) {
+
       nombre_corto <- paste(palabras[1], palabras[2])
-      
-      row_meta <- meta %>% 
+
+      row_meta <- meta %>%
         filter(grepl(nombre_corto, Species, ignore.case = TRUE))
     }
   }
-  
-  if (nrow(row_meta) == 0) {
-    next
-  }
-  
+
+  ### si no existe metadata para la especie se omite
+  if (nrow(row_meta) == 0) next
+
+  ### cargar raster AOH de la especie
   r <- rast(aoh_file)
-  
-  r_bin <- r
-  r_bin[r > 0] <- 1
-  r_bin[r <= 0 | is.na(r)] <- NA
-  
+
+  ### contar celdas de presencia en toda la distribucion
   ca <- freq(r_bin)
-  
-  global_cells <- ifelse(any(ca$value == 1, na.rm = TRUE),
-                         ca$count[ca$value == 1], 0)
-  
-  if (global_cells == 0) {
-    next
-  }
-  
+
+  global_cells <- ifelse(
+    any(ca$value == 1, na.rm = TRUE),
+    ca$count[ca$value == 1],
+    0
+  )
+
+  ### si no hay celdas de presencia se omite
+  if (global_cells == 0) next
+
+  ### recortar raster usando el area de interes
   r_crop <- mask(r_bin, mask_aoi)
-  
+
+  ### contar celdas de presencia dentro del AOI
   ca_crop <- freq(r_crop)
-  
-  overlap_cells <- ifelse(any(ca_crop$value == 1, na.rm = TRUE),
-                          ca_crop$count[ca_crop$value == 1], 0)
-  
+
+  overlap_cells <- ifelse(
+    any(ca_crop$value == 1, na.rm = TRUE),
+    ca_crop$count[ca_crop$value == 1],
+    0
+  )
+
+  ### proporcion del rango de la especie dentro del AOI
   START <- overlap_cells / global_cells
-  
+
+  ### calculo del indice STAR usando el peso IUCN
   STAR_species <- START * row_meta$weight[1]
-  
+
+  ### estimacion de area (suponiendo celdas de 1 km2 = 100 ha)
   area_ha_total <- global_cells * 100
   area_ha_aoi <- overlap_cells * 100
-  
-  results <- rbind(results, data.frame(
-    especie = spname,
-    iucn_status = row_meta$iucn_status[1],
-    weight = row_meta$weight[1],
-    global_area_ha = area_ha_total,
-    aoi_area_ha = area_ha_aoi,
-    START = START,
-    STAR = STAR_species
-  ))
+
+  ### guardar resultados de la especie
+  results <- rbind(
+    results,
+    data.frame(
+      especie = spname,
+      iucn_status = row_meta$iucn_status[1],
+      weight = row_meta$weight[1],
+      global_area_ha = area_ha_total,
+      aoi_area_ha = area_ha_aoi,
+      START = START,
+      STAR = STAR_species
+    )
+  )
 }
 
 
-# ===============================
-# PARTE 6: RESULTADOS
-# ===============================
+## Resultados
 
 STAR_total <- sum(results$STAR, na.rm = TRUE)
 
@@ -205,39 +232,14 @@ resumen_categoria <- results %>%
     .groups = "drop"
   )
 
-
-# ===============================
-# PARTE 7: GUARDAR RESULTADOS
-# ===============================
-
-write.csv(results,
-          file.path(dir_aoh, "Resultados_STAR_Completos.csv"),
-          row.names = FALSE)
-
-write.csv(resumen_categoria,
-          file.path(dir_aoh, "Resumen_STAR.csv"),
-          row.names = FALSE)
-
-# Resultados STAR - Área de Estudio
-
-## Estadísticas Generales
-
-| Métrica | Valor |
-|--------|------|
-| Especies analizadas | **69** |
-| Área total en AOI | **100,238,400 ha** |
-| STAR Total | **10.48** |
-
----
-
 ## Desglose por Categoría IUCN
 
 | Categoría IUCN | Nº Especies | Área (ha) | STAR |
 |----------------|------------|-----------|------|
-| CR | 2 | 360,300 | **7.65** |
-| VU | 1 | 167,300 | **1.76** |
-| NT | 1 | 195,600 | **1.07** |
-| LC | 65 | 99,515,200 | 0 |
+| CR | 2 | 649,600 | **13.1** |
+| VU | 1 | 324,800 | **3.28** |
+| NT | 1 | 324,800 | **1.64** |
+| LC | 65 | 21,112,000 | 0 |
 
 ---
 
