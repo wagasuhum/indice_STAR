@@ -191,3 +191,44 @@ for (i in 1:nrow(top_star)) {
               top_star$weight[i], top_star$STAR_species[i]))
 }
 
+
+# Resultados STAR - Área de Estudio
+
+## Estadísticas Generales
+
+| Métrica | Valor |
+|--------|------|
+| Especies analizadas | **69** |
+| Área total en AOI | **100,238,400 ha** |
+| STAR Total | **10.48** |
+
+---
+
+## Desglose por Categoría IUCN
+
+| Categoría IUCN | Nº Especies | Área (ha) | STAR |
+|----------------|------------|-----------|------|
+| CR | 2 | 360,300 | **7.65** |
+| VU | 1 | 167,300 | **1.76** |
+| NT | 1 | 195,600 | **1.07** |
+| LC | 65 | 99,515,200 | 0 |
+
+---
+
+## Top 10 Especies con Mayor Contribución a STAR
+
+| # | Especie | IUCN | Puntos | Área (ha) | START | STAR |
+|---|--------|------|--------|-----------|-------|------|
+| 1 | *Philander opossum* | CR | 400 | 360,300 | 0.0191 | **7.65** |
+| 2 | *Myrmecophaga tridactyla* | VU | 200 | 167,300 | 0.0088 | **1.76** |
+| 3 | *Leopardus wiedii* | NT | 100 | 195,600 | 0.0107 | **1.07** |
+| 4 | *Aramides cajaneus* | LC | 0 | 4,978,100 | 0.0830 | 0 |
+| 5 | *Ardea alba* | LC | 0 | 205,200 | 0.0114 | 0 |
+| 6 | *Arremon taciturnus* | LC | 0 | 4,015,800 | 0.0759 | 0 |
+| 7 | *Arremonops conirostris* | LC | 0 | 2,048,300 | 0.1109 | 0 |
+| 8 | *Basileuterus culicivorus* | LC | 0 | 4,932,900 | 0.1170 | 0 |
+| 9 | *Bos taurus* | LC | 0 | 91,700 | 0.0051 | 0 |
+|10 | *Bubulcus ibis* | LC | 0 | 151,000 | 0.0083 | 0 |
+
+---
+
