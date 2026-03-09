@@ -55,142 +55,168 @@ aoh_por_tesela <- extract(aoh_m, teselas, fun = sum, na.rm = TRUE)
 teselas$aoh_cells <- aoh_por_tesela[,2]
 
 
-## Calculo de STAR
+# ============================================================================
+# SCRIPT PARA CALCULAR STAR USANDO LOS AOHS GENERADOS
+# ============================================================================
 
-### Cargar librerías
+# Cargar librerías
 library(terra)
 library(sf)
 library(dplyr)
 library(readr)
+library(stringr)
 
-### configuracion inicial 
-dir_rasters <- "C:/Users/walter.garcia/Documents/STAR/PiedemonteMeta/"
-csv_file <- "C:/Users/walter.garcia/Documents/STAR/Especies.csv"
+# ===============================
+# PARTE 1: CONFIGURACIÓN DE RUTAS
+# ===============================
+
+# Carpeta donde están los AOHs generados
+dir_aoh <- "C:/Users/walter.garcia/Documents/STAR/AOH_Generados/"
+
+# Archivo de metadata con categorías IUCN
+csv_file <- "C:/Users/walter.garcia/Documents/STAR/Especies_3.csv"
+
+# Shapefile del área de interés
 aoi_file <- "C:/Users/walter.garcia/Documents/STAR/poligono_pais_centrado.shp"
 
-### Leer metadata
-meta <- read_delim(csv_file, delim = ";")
-meta$species_file <- basename(meta$species_file)
 
-### Asignar pesos IUCN SEGÚN DOCUMENTACIÓN STAR
+# ===============================
+# PARTE 2: LEER METADATA Y PESOS IUCN
+# ===============================
+
+meta <- read_delim(csv_file, delim = ";")
+
+# Pesos IUCN
 iucn_weights <- c("LC" = 0, "NT" = 100, "VU" = 200, "EN" = 300, "CR" = 400)
+
 meta$weight <- iucn_weights[meta$iucn_status]
 
-if (any(is.na(meta$weight))) {
-  warning("⚠ Algunas especies no tienen estado IUCN válido en 'meta'.")
+
+# ===============================
+# PARTE 3: LEER ARCHIVOS AOH
+# ===============================
+
+aoh_files <- list.files(dir_aoh, pattern = "_AOH\\.tif$", full.names = TRUE)
+
+if (length(aoh_files) == 0) {
+  stop("No se encontraron archivos AOH")
 }
 
-###  Leer Area de interes (shapefile)
+
+# ===============================
+# PARTE 4: PREPARAR ÁREA DE INTERÉS
+# ===============================
+
 aoi <- st_read(aoi_file)
 
-### Preparar rasters de especies
+ref_raster <- rast(aoh_files[1])
 
-r_files <- list.files(dir_rasters, pattern = "\\.tif$", full.names = TRUE)
+aoi_proj <- st_transform(aoi, crs(ref_raster))
 
-### Reproyectar AOI al CRS de los rasters
-ref <- rast(r_files[1])
-aoi_proj <- st_transform(aoi, crs(ref))
-mask_aoi <- rasterize(vect(aoi_proj), ref, field = 1)
+mask_aoi <- rasterize(vect(aoi_proj), ref_raster, field = 1)
 
-### Loop por especies
+
+# ===============================
+# PARTE 5: CALCULAR STAR
+# ===============================
 
 results <- data.frame()
 
-for (r_file in r_files) {
-  spname <- basename(r_file)
-  row_meta <- meta %>% filter(species_file == spname)
+for (i in 1:length(aoh_files)) {
+  
+  aoh_file <- aoh_files[i]
+  nombre_archivo <- basename(aoh_file)
+  
+  spname <- gsub("_AOH\\.tif$", "", nombre_archivo)
+  spname <- gsub("_", " ", spname)
+  
+  row_meta <- meta %>% 
+    filter(tolower(trimws(Species)) == tolower(trimws(spname)))
   
   if (nrow(row_meta) == 0) {
-    warning(paste("⚠ No hay metadata para:", spname))
+    
+    palabras <- str_split(spname, " ")[[1]]
+    
+    if (length(palabras) >= 2) {
+      nombre_corto <- paste(palabras[1], palabras[2])
+      
+      row_meta <- meta %>% 
+        filter(grepl(nombre_corto, Species, ignore.case = TRUE))
+    }
+  }
+  
+  if (nrow(row_meta) == 0) {
     next
   }
   
-  #### Leer raster
-  r <- rast(r_file)
+  r <- rast(aoh_file)
   
-  #### Binarizar (1 = presencia, NA = ausencia)
   r_bin <- r
   r_bin[r > 0] <- 1
   r_bin[r <= 0 | is.na(r)] <- NA
   
-  #### Contar celdas globales
   ca <- freq(r_bin)
-  global_cells <- ifelse(any(ca$value == 1), ca$count[ca$value == 1], 0)
   
-  #### Recortar con AOI
+  global_cells <- ifelse(any(ca$value == 1, na.rm = TRUE),
+                         ca$count[ca$value == 1], 0)
+  
+  if (global_cells == 0) {
+    next
+  }
+  
   r_crop <- mask(r_bin, mask_aoi)
+  
   ca_crop <- freq(r_crop)
-  overlap_cells <- ifelse(any(ca_crop$value == 1), ca_crop$count[ca_crop$value == 1], 0)
   
-  #### Calcular START para esta especie (proporción de superposición)
-  START <- ifelse(global_cells > 0, overlap_cells / global_cells, NA)
+  overlap_cells <- ifelse(any(ca_crop$value == 1, na.rm = TRUE),
+                          ca_crop$count[ca_crop$value == 1], 0)
   
-  #### CORRECCIÓN: Calcular STAR para esta especie según metodología oficial
-  #### STAR = START * Peso_IUCN
-  STAR_species <- START * row_meta$weight
+  START <- overlap_cells / global_cells
   
+  STAR_species <- START * row_meta$weight[1]
   
-  ### Guardar resultados
+  area_ha_total <- global_cells * 100
+  area_ha_aoi <- overlap_cells * 100
+  
   results <- rbind(results, data.frame(
-    species_id    = row_meta$Species_id,
-    species       = row_meta$Species,
-    file          = spname,
-    iucn_status   = row_meta$iucn_status,
-    weight        = row_meta$weight,
-    global_cells  = global_cells,
-    overlap_cells = overlap_cells,
-    START         = START,
-    STAR_species  = STAR_species  # STAR individual por especie
+    especie = spname,
+    iucn_status = row_meta$iucn_status[1],
+    weight = row_meta$weight[1],
+    global_area_ha = area_ha_total,
+    aoi_area_ha = area_ha_aoi,
+    START = START,
+    STAR = STAR_species
   ))
 }
 
-### Calcular índices globales CORREGIDOS
 
+# ===============================
+# PARTE 6: RESULTADOS
+# ===============================
 
-#### STAR total = Suma de todos los STAR individuales
-STAR_total <- sum(results$STAR_species, na.rm = TRUE)
+STAR_total <- sum(results$STAR, na.rm = TRUE)
 
-#### También calcular por categoría IUCN
-STAR_by_category <- results %>%
+resumen_categoria <- results %>%
   group_by(iucn_status) %>%
   summarise(
-    n_especies = n(),
-    STAR_categoria = sum(STAR_species, na.rm = TRUE),
-    .groups = 'drop'
+    N_especies = n(),
+    Area_ha = sum(aoi_area_ha),
+    STAR = sum(STAR),
+    .groups = "drop"
   )
 
-#### Mostrar resultados CORREGIDOS
 
-cat("==================================================\n")
-cat("📊 RESULTADOS FINALES - ANÁLISIS STAR (CORREGIDO)\n")
-cat("==================================================\n")
-cat("Total especies procesadas:", nrow(results), "\n")
-cat("Total archivos raster encontrados:", length(r_files), "\n")
-cat("STAR TOTAL (según metodología oficial):", round(STAR_total, 2), "\n")
-cat("==================================================\n\n")
+# ===============================
+# PARTE 7: GUARDAR RESULTADOS
+# ===============================
 
-### Resultados por categoría IUCN
-cat("DESGLOSE POR CATEGORÍA IUCN:\n")
-cat("----------------------------------------\n")
-for (i in 1:nrow(STAR_by_category)) {
-  cat(sprintf("%s: %2d especies, STAR=%8.2f\n", 
-              STAR_by_category$iucn_status[i], 
-              STAR_by_category$n_especies[i],
-              STAR_by_category$STAR_categoria[i]))
-}
+write.csv(results,
+          file.path(dir_aoh, "Resultados_STAR_Completos.csv"),
+          row.names = FALSE)
 
-cat("\n")
-
-### Mostrar las 10 especies con mayor contribución a STAR
-cat("TOP 10 ESPECIES - MAYOR CONTRIBUCIÓN A STAR:\n")
-cat("----------------------------------------\n")
-top_star <- results[order(-results$STAR_species), ][1:10, ]
-for (i in 1:nrow(top_star)) {
-  cat(sprintf("%2d. %-30s START=%6.4f Peso=%3d STAR=%7.2f\n", 
-              i, top_star$species[i], top_star$START[i], 
-              top_star$weight[i], top_star$STAR_species[i]))
-}
-
+write.csv(resumen_categoria,
+          file.path(dir_aoh, "Resumen_STAR.csv"),
+          row.names = FALSE)
 
 # Resultados STAR - Área de Estudio
 
