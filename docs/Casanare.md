@@ -42,7 +42,7 @@ Para las diferentes categorías taxonómicas observadas en la zona, destaca la c
 Dentro del siguiente grado de amenaza en peligro resaltan las clases pertenecientes al reino plantae,  dentro de la cuales Cycadopsida, Magnoliopsida y Liliopsida contienen un número considerable de especies con valores superiores al 40%, una respuesta similar se observa en vertebrados de la clase Amphibia, Testudines y Squamata en la cuales el 50% de estas se encuentra en este nivel de amenaza. 
 
 <p align="center">
-  <img src="assets/img/grafica7.png" width="600">
+  <img src="./assets/img/grafica7.png" width="600">
 </p>
 
 ##🦎 Poligonos de especies amenazdas segun categoria UICN
