@@ -47,9 +47,7 @@ Dentro del siguiente grado de amenaza en peligro resaltan las clases pertenecien
 
 ### Amenazas segun la uicn para la especies presentes en la zona
 
-<div align="center">
-  <img src="assets/img/grafica13.png" width="600">
-</div>
+![Gráfica 13](./assets/img/grafica13.png)
 
 ## 🦦 Amenazas UICN para las especies presentes en el poligono
 
