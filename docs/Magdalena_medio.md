@@ -1,5 +1,5 @@
 ### 🦇 Especies que se encuentran amenazadas segun IUCN
-![Gráfica 1](./assets/img_MM/grafica1_MM.png)
+![Gráfica 1](./assets/img_MM/grafica1MM.png)
 
 
 ### 🐸 Especies amenazadas segun resolucion 126 de 2024
