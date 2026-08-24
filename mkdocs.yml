@@ -4,6 +4,8 @@ theme:
   name: readthedocs
 nav:
   - Inicio: index.md
+  - Casanare: Casanare.md
+  - Magdalena Medio: Magdalena_medio.md
   - Aplicacion: aplicacion.md
 
 markdown_extensions:
