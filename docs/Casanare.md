@@ -2,9 +2,7 @@
 
 Para las 5735 especies reportadas en la zona del piedemonte de Casanare, un total de 62 especies son endémicas y se encuentran en algún grado de amenaza según la UICN, un 74.2% (46) de las especies se encuentran en peligro y vulnerable, mientras que un 14.5% de taxones se encuentra en casi amenazados y 11.3% en peligro crítico. En contraste, para la zona las especies no endémicas se distribuyen en las categorías de casi amenazadas con 45.6%, en vulnerables con un 41.2%, y un 13.2% en peligro.
 
-<p align="center">
-  <img src="assets/img/grafica1.png" width="600">
-</p>
+![Gráfica 7](./assets/img/grafica7.png)
 
 La mayoría de especies amenazadas y que son endémicas pertenece a las plantas que comprenden las clases Magnoliopsida (55.6%), Liliopsida (7.5%), y Cicadopsida (1.9%), para el reino Animalia, la mayoría corresponde a anfibios (15.1%), seguido por los peces de la clase Actinopterygii (9.4%), las aves (7.5%) y por ultimo, los mamíferos (1.9%).
 
