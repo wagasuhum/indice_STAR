@@ -15,7 +15,3 @@
 
 ![Gráfica 7](./assets/img_MM/grafica7MM.png)
 
-### 🦎 Poligonos de especies amenazdas segun categoria UICN
-### Poligonos de especies amenazadas por grupo
-### Poligonos de especies amenazadas por grupo segun categoria de resolucion 126 de 2024
-### Amenazas segun la uicn para la especies presentes en la zona
