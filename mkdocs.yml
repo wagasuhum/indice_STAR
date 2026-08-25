@@ -3,7 +3,7 @@ site_name: Índice STAR
 theme:
   name: readthedocs
 nav:
-  - Inicio: index.md
+  - Marco conceptual: index.md
   - Casanare: Casanare.md
   - Magdalena Medio: Magdalena_medio.md
   - Aplicacion: aplicacion.md
