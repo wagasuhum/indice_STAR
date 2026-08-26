@@ -12,8 +12,6 @@
 
 ## Poligonos de especies amenazadas por grupo segun categoria de resolucion 126 de 2024
 
-<p align="center">
-
 ## Amenazas segun la uicn para la especies presentes en la zona
 
 ![Gráfica 12](./assets/img/grafica13.png)
