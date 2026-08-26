@@ -4,6 +4,7 @@ theme:
   name: readthedocs
 nav:
   - Marco conceptual: index.md
+  - Especies amenazadas: amenazas.md
   - Casanare: Casanare.md
   - Magdalena Medio: Magdalena_medio.md
   - Aplicacion: aplicacion.md
