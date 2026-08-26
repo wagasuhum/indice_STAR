@@ -9,7 +9,7 @@
 
 ![Gráfica 5](./assets/img_MM/grafica5MM.png)
 
-## Especies amenazadas segun resolucion 126 de 2024
+# Especies amenazadas segun resolucion 126 de 2024
 
 ![Gráfica 6](./assets/img_MM/grafica6MM.png)
 
