@@ -39,7 +39,7 @@ El propósito principal de la métrica STAR (Species Threat Abatement and Restor
 ## Flujo de trabajo para el calculo
 
 <p align="center">
-  <img src="docs/assets/Metodologia%20STAR.png" width="600">
+  <img src="docs/assets/img/Metodologia%20STAR.png" width="600">
 </p>
 
 ---
