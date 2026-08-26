@@ -1,4 +1,4 @@
-## Poligonos de especies amenazadas segun categoria UICN
+# Poligonos de especies amenazadas segun categoria UICN
 
 ![Gráfica 9](./assets/img/grafica9.png)
 
@@ -19,9 +19,7 @@
 
 
 
-
-
-## Amenazas UICN para las especies presentes en el poligono
+# Amenazas UICN para las especies presentes en el poligono
 
 
 Un total de 42 especies para la zona del altiplano de Casanare presentan una amenaza en común de nivel uno que se relaciona con aspectos de desarrollo residencial y comercial, dentro de los cuales destaca el establecimiento de diferente infraestructura para la formación de asentamientos humanos, dentro de las cuales cinco especies (Chaetostoma dorsale, Chaetostoma formosae, Dolichancistrus fuesslii, Lontra longicaudis, Pentagonia magnifica), tiene una alcance major de este tipo de presión, lo que afectan notoriamente su categorización dentro de la lista roja; igualmente para el segundo nivel que corresponde a afectaciones en las especies generadas por actividades como agricultura y acuicultura específicamente actividades con cultivos anuales y perennes que tienen un impacto mayor en grupos de mamíferos como (Lontra longicaudis, Tremarctos ornatus, Myrmecophaga tridactyla).
