@@ -20,7 +20,7 @@ En términos generales la mayoría de especies amenazadas para la zona usando el
 
 ![Gráfica 5](./assets/img/grafica5.png)
 
-# Especies amenazadas segun resolucion 126 de 2024
+## Especies amenazadas segun resolucion 126 de 2024
 
 En términos de la resolución 126 de 2024, que establecen las especies amenazadas bajo un criterio nacional, se observa que la mayoría de especies se encuentran en un categoría vulnerable alcanzando el 46.7% de los registros de la zona, seguido por los taxones que se encuentran en peligro con el 41.1%, y por último en peligro crítico a nivel local se encuentran 12.2% de los grupos reportados para la zona de interés.
 
