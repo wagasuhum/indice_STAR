@@ -1,4 +1,4 @@
-##🦇 Especies que se encuentran amenazadas segun IUCN
+# Especies que se encuentran amenazadas segun IUCN
 
 Para las 5735 especies reportadas en la zona del piedemonte de Casanare, un total de 62 especies son endémicas y se encuentran en algún grado de amenaza según la UICN, un 74.2% (46) de las especies se encuentran en peligro y vulnerable, mientras que un 14.5% de taxones se encuentra en casi amenazados y 11.3% en peligro crítico. En contraste, para la zona las especies no endémicas se distribuyen en las categorías de casi amenazadas con 45.6%, en vulnerables con un 41.2%, y un 13.2% en peligro.
 
@@ -20,7 +20,7 @@ En términos generales la mayoría de especies amenazadas para la zona usando el
 
 ![Gráfica 5](./assets/img/grafica5.png)
 
-##🐸 Especies amenazadas segun resolucion 126 de 2024
+## Especies amenazadas segun resolucion 126 de 2024
 
 En términos de la resolución 126 de 2024, que establecen las especies amenazadas bajo un criterio nacional, se observa que la mayoría de especies se encuentran en un categoría vulnerable alcanzando el 46.7% de los registros de la zona, seguido por los taxones que se encuentran en peligro con el 41.1%, y por último en peligro crítico a nivel local se encuentran 12.2% de los grupos reportados para la zona de interés.
 
