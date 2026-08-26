@@ -1,10 +1,10 @@
 #🦎 Poligonos de especies amenazadas segun categoria UICN
 
 <p align="center">
-  <img src="/assets/img/grafica9.png" width="600">
+  <img src="../assets/img/grafica9.png" width="600">
 </p>
 
-### Poligonos de especies amenazadas por grupo
+## Poligonos de especies amenazadas por grupo
 
 <p align="center">
   <img src="/assets/img/grafica10.png" width="600">
