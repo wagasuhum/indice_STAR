@@ -12,7 +12,15 @@ Para las especies evaluadas según su distribución por Clase, la mitad de los r
 
 ![Gráfica 3](./assets/img_MM/grafica3MM.png)
 
+Para Testudines, la mayoría se ubica en en peligro crítico (CR) con un 64.3%, mientras que el 35.7% restante corresponde a vulnerable (VU). En los grupos Squamata y Gastropoda, la totalidad de los registros (100%) se concentra en peligro crítico (CR). Por su parte, Mammalia presenta una amplia dominancia en peligro (EN) con el 79.3%, seguida de vulnerable (VU) con 11.4% y casi amenazada (NT) con 9.1%.
+
+En Magnoliopsida, predomina la categoría vulnerable (VU) con un 85.9%, acompañada por un 13.7% en peligro (EN). Para Liliopsida, los registros se distribuyen equitativamente entre vulnerable (VU) y en peligro crítico (CR), con un 50% para cada categoría. En contraste, Crocodylia se ubica en su totalidad (100%) en la categoría vulnerable (VU).
+
+Finalmente, en Aves prevalece la categoría vulnerable (VU) con un 65.5%, seguida de casi amenazada (NT) con 30.9% y proporciones menores en peligro (EN) y peligro crítico (CR). En Actinopterygii, la mayor proporción corresponde a casi amenazada (NT) con un 48.2%, seguida por vulnerable (VU) con 30.7%, en peligro (EN) con 14.3% y en peligro crítico (CR) con 6.9%.
+
 ![Gráfica 4](./assets/img_MM/grafica4MM.png)
+
+
 
 ![Gráfica 5](./assets/img_MM/grafica5MM.png)
 
