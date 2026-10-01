@@ -20,6 +20,7 @@ Finalmente, en Aves prevalece la categoría vulnerable (VU) con un 65.5%, seguid
 
 ![Gráfica 4](./assets/img_MM/grafica4MM.png)
 
+Para las especies evaluadas según su categoría global de amenaza según la UICN, la mayor proporción de los registros se concentra en la categoría en peligro (EN) con un 40.7% (2394), seguida por las especies clasificadas como vulnerables (VU) con un 30.3% (1780) y casi amenazadas (NT) con un 25.5% (1502). En contraste, la menor proporción corresponde a la categoría de en peligro crítico (CR), abarcando un 3.5% (204) de los registros evaluados.
 
 
 ![Gráfica 5](./assets/img_MM/grafica5MM.png)
