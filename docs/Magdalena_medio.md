@@ -27,6 +27,8 @@ Para las especies evaluadas según su categoría global de amenaza según la UIC
 
 # Especies amenazadas segun resolucion 126 de 2024
 
+Para las especies evaluadas bajo alguna categoría de amenaza (excluyendo las casi amenazadas), más de la mitad de los registros se concentran en la categoría en peligro (EN) con un 54.7% (2394), seguida por las especies clasificadas como vulnerables (VU) con un 40.7% (1780). En contraste, la menor proporción corresponde a las especies en peligro crítico (CR), que representan el 4.7% (204) del total de taxones amenazados.
+
 ![Gráfica 6](./assets/img_MM/grafica6MM.png)
 
 ![Gráfica 7](./assets/img_MM/grafica7MM.png)
