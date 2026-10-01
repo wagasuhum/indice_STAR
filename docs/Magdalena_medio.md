@@ -31,5 +31,9 @@ Para las especies evaluadas bajo alguna categoría de amenaza (excluyendo las ca
 
 ![Gráfica 6](./assets/img_MM/grafica6MM.png)
 
+En Squamata, Lecanoromycetes y Gastropoda, la totalidad de sus especies amenazadas (100%) se ubica en en peligro crítico (CR). Por su parte, la categoría en peligro (EN) representa la totalidad de las especies (100%) en Malacostraca, Crocodylia y Arachnida, mientras que en Liliopsida alcanza un predominante 93.4% (complementado por un 5.6% en VU y 1.0% en CR), e igualmente en Mammalia constituye la mayor proporción con un 58% (frente a un 41.8% en VU y 0.2% en CR)
+
+En contraste, la categoría vulnerable (VU) comprende la totalidad de las especies amenazadas (100%) en Polypodiopsida, Pinopsida e Insecta. Asimismo, presenta una clara dominancia en Aves con un 99% (seguida de un 1.0% en EN), en Actinopterygii con un 94.7% (acompañada por un 3.6% en CR y 1.7% en EN), en Amphibia con un 92% (frente a un 8% en EN) y en Testudines con un 79.1% (completado por un 20.9% en CR). Finalmente, en Magnoliopsida la distribución es más balanceada, con una mayor proporción en vulnerable (VU) con 49.4%, seguida de en peligro (EN) con 42.9% y en peligro crítico (CR) con 7.8%.
+
 ![Gráfica 7](./assets/img_MM/grafica7MM.png)
 
