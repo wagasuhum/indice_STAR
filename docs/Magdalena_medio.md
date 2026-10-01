@@ -4,6 +4,8 @@ Para las especies evaluadas según su condición de endemismo, un total de 2229 
 
 ![Gráfica 1](./assets/img_MM/grafica1MM.png)
 
+Para las especies evaluadas según su distribución por Clase, la gran mayoría de los registros se concentran en Actinopterygii con un 73.3% (701), seguida en menor proporción por Mammalia con un 13.5% (129) y Magnoliopsida con un 10.7% (102). En contraste, los demás grupos taxonómicos registran representaciones minoritarias, correspondiendo a Testudines con un 0.9% (9), Amphibia con un 0.6% (6), Liliopsida con un 0.5% (5), Aves con un 0.3% (3) y Squamata con apenas un 0.1% (1).
+
 ![Gráfica 2](./assets/img_MM/grafica2MM.png)
 
 ![Gráfica 3](./assets/img_MM/grafica3MM.png)
