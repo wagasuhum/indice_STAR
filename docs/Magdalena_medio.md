@@ -8,6 +8,8 @@ Para las especies evaluadas según su distribución por Clase, la gran mayoría 
 
 ![Gráfica 2](./assets/img_MM/grafica2MM.png)
 
+Para las especies evaluadas según su distribución por Clase, la mitad de los registros se concentran en Mammalia con un 50.2% (2196), seguida por Actinopterygii con un 31.1% (1361) y Magnoliopsida con un 16.7% (732). En contraste, los demás grupos taxonómicos presentan representaciones minoritarias, correspondiendo a Aves con un 0.9% (38), Amphibia con un 0.6% (25), Testudines con un 0.3% (14), Liliopsida y Crocodylia con un 0.1% cada una (6 y 4 registros respectivamente), y con representaciones marginales inferiores al 0.1% en Squamata con 1 registro (0%) y Gastropoda con 1 registro (0%).
+
 ![Gráfica 3](./assets/img_MM/grafica3MM.png)
 
 ![Gráfica 4](./assets/img_MM/grafica4MM.png)
