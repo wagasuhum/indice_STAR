@@ -7,6 +7,7 @@ nav:
   - Especies amenazadas: amenazas.md
   - Casanare: Casanare.md
   - Magdalena Medio: Magdalena_medio.md
+  - Guajira: Guajira.md
   - Aplicacion: aplicacion.md
 
 markdown_extensions:
